@@ -2,13 +2,14 @@
   "name": "cursor-learning-mode",
   "displayName": "Cursor Learning Mode",
   "description": "Toggle between Builder Mode and Learning Mode for guided coding.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "ShiboDing",
   "icon": "media/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/TangyrenMidKing/cursor-learner-mode.git"
   },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.90.0"
   },
