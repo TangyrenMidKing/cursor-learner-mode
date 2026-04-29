@@ -1,0 +1,85 @@
+{
+  "name": "cursor-learning-mode",
+  "displayName": "Cursor Learning Mode",
+  "description": "Toggle between Builder Mode and Learning Mode for guided coding.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:cursorLearningMode.toggleMode",
+    "onCommand:cursorLearningMode.enableLearningMode",
+    "onCommand:cursorLearningMode.enableBuilderMode",
+    "onCommand:cursorLearningMode.generateLearningHint",
+    "onCommand:cursorLearningMode.generateScaffold",
+    "onView:cursorLearningMode.sidebar"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorLearningMode.toggleMode",
+        "title": "Toggle Learning Mode"
+      },
+      {
+        "command": "cursorLearningMode.enableLearningMode",
+        "title": "Enable Learning Mode"
+      },
+      {
+        "command": "cursorLearningMode.enableBuilderMode",
+        "title": "Enable Builder Mode"
+      },
+      {
+        "command": "cursorLearningMode.generateLearningHint",
+        "title": "Generate Learning Hint"
+      },
+      {
+        "command": "cursorLearningMode.generateScaffold",
+        "title": "Generate Scaffold"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cursorLearningMode.toggleMode",
+        "key": "ctrl+shift+l",
+        "when": "editorTextFocus"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "cursorLearningMode",
+          "title": "Learning Mode",
+          "icon": "media/graduation.svg"
+        }
+      ]
+    },
+    "views": {
+      "cursorLearningMode": [
+        {
+          "id": "cursorLearningMode.sidebar",
+          "name": "Mode Control",
+          "type": "webview"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run compile",
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.4"
+  }
+}
