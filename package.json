@@ -2,8 +2,9 @@
   "name": "cursor-learning-mode",
   "displayName": "Cursor Learning Mode",
   "description": "Toggle between Builder Mode and Learning Mode for guided coding.",
-  "version": "0.0.1",
-  "publisher": "local",
+  "version": "0.0.3",
+  "publisher": "ShiboDing",
+  "icon": "media/logo.png",
   "engines": {
     "vscode": "^1.90.0"
   },
